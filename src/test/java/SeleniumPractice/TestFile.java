@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class TestFile {
 	@Test
-	public void customxpathtest() {
+	public void testMethod() {
 		System.out.println("Test");
 	}
 	
