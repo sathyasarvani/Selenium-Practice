@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<parameter name="suite-level-param" value="This is a Suite level Parameter"></parameter>
+  <test  name="Test">
+  <parameter name="test-level-param" value="This is a Test level Parameter"></parameter>
+  <classes>
+  <class name="Practice.com.practice.tests.TestNGPractice.ParameterizationUsingXml">
+  <methods>
+  <include name="firstTest"></include>
+  <include name="secondTest"></include>
+  </methods>
+  </class>
+  </classes>
+  </test> <!-- Test -->
+  
+  <test name="Test1">
+  <classes>
+  <class name="Practice.com.practice.tests.TestNGPractice.ParameterizationUsingXml">
+  <methods>
+  <parameter name="suite-level-param" value="Overriding suite level param"></parameter>
+  <parameter name="test-level-param" value="Test level param"></parameter>
+  <include name="thirdTest"></include>
+  </methods>
+  </class>
+  </classes>
+  </test>
+  
+  <!-- <test name="dataProviderTest">
+  <classes>
+  <class name="Practice.com.practice.tests.TestNGPractice.ParameterizingWithDataProvider"/>
+  </classes>
+  </test> -->
+  
+  <!-- <test name="parallelTest" parallel="methods" thread-count="2">
+  <classes>
+  <class name="Practice.com.practice.tests.TestNGPractice.ParallelTests"/>
+  </classes>
+  </test>  -->
+  
+  <test name="parallelClassTest" parallel="classes" thread-count="2">
+  <classes>
+  <class name="Practice.com.practice.tests.TestNGPractice.ParallelTests"/>
+  <class name="Practice.com.practice.tests.TestNGPractice.ParallelTest2"/>
+  </classes>
+  </test> 
+</suite>

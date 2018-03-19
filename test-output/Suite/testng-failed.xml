@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="suite-level-param" value="This is a Suite level Parameter"/>
+  <test thread-count="5" name="dataProviderTest(failed)">
+    <classes>
+      <class name="Practice.com.practice.tests.TestNGPractice.ParameterizingWithDataProvider">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="registrationTest" invocation-numbers="4"/>
+        </methods>
+      </class> <!-- Practice.com.practice.tests.TestNGPractice.ParameterizingWithDataProvider -->
+    </classes>
+  </test> <!-- dataProviderTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
